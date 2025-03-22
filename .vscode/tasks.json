@@ -1,0 +1,22 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build and Run",
+            "type": "shell",
+            "command": "clang++",
+            "args": [
+                "-std=c++11",
+                "main.cc",
+                "-o",
+                "output",
+                "&&",
+                "./output"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        }
+    ]
+}
