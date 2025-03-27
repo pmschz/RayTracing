@@ -8,7 +8,7 @@
 
 ---
 
-## 📖 Overview
+## Overview
 <p>
 This project provides a foundation for creating computer-generated images using ray tracing techniques. 
 It implements a basic ray tracer that generates gradient images in <b>PPM format</b>. Ray tracing is a 
@@ -17,24 +17,24 @@ rendering technique that produces highly realistic lighting effects by simulatin
 
 ---
 
-## 🎨 Current Features
+## Current Features
 <ul>
-  <li>🖼️ Output in <b>PPM (Portable Pixmap)</b> format</li>
-  <li>📏 Configurable image dimensions</li>
+  <li> Output in <b>PPM (Portable Pixmap)</b> format</li>
+  <li> Configurable image dimensions</li>
 </ul>
 
 ---
 
-## 🛠️ Prerequisites
+## 🛠Prerequisites
 <ul>
-  <li>🔹 C++ compiler (<code>g++</code> or <code>clang++</code>)</li>
-  <li>🔹 CMake</li>
-  <li>🔹 Image viewer that supports PPM format or a converter</li>
+  <li> C++ compiler (<code>g++</code> or <code>clang++</code>)</li>
+  <li> CMake</li>
+  <li> Image viewer that supports PPM format or a converter</li>
 </ul>
 
 ---
 
-## 🚀 Clone the Repository
+##  Clone the Repository
 <pre>
 git clone https://github.com/pmschz/RayTracing.git
 cd RayTracing
@@ -42,7 +42,7 @@ cd RayTracing
 
 ---
 
-## 🔨 Build using CMake
+##  Build using CMake
 <pre>
 mkdir build
 cd build
@@ -52,14 +52,14 @@ make
 
 ---
 
-## 🖥️ Run the Ray Tracer
+##  Run the Ray Tracer
 <pre>
 g++ -std=c++11 src/main.cc -o main && ./main > image.ppm
 </pre>
 
 ---
 
-## 🖼️ To View Output on Mac
+##  To View Output on Mac
 <pre>
 open output.ppm
 </pre>
