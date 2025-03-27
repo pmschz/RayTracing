@@ -2,8 +2,9 @@
 #define HITTABLE_LIST_H
 
 #include "hittable.h"
+
 #include <vector>
-#include "rtweekend.h"
+
 
 class hittable_list : public hittable {
   public:
@@ -34,5 +35,6 @@ class hittable_list : public hittable {
         return hit_anything;
     }
 };
+
 
 #endif
