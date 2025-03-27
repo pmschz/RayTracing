@@ -1,23 +1,9 @@
 #include "rtweekend.h"
+#include "camera.h"
 #include "hittable.h"
 #include "hittable_list.h"
-#include "sphere.h"
-#include "camera.h"
 #include "material.h"
-
-double hit_sphere(const point3& center, double radius, const ray& r) {
-    vec3 oc = center - r.origin();
-    auto a = r.direction().length_squared();
-    auto h = dot(r.direction(), oc);
-    auto c = oc.length_squared() - radius*radius;
-    auto discriminant = h*h - a*c;
-
-    if (discriminant < 0) {
-        return -1.0;
-    } else {
-        return (h - std::sqrt(discriminant)) / a;
-    }
-}
+#include "sphere.h"
 
 
 int main() {
@@ -67,8 +53,8 @@ int main() {
 
     cam.aspect_ratio      = 16.0 / 9.0;
     cam.image_width       = 1200;
-    cam.samples_per_pixel = 500;
-    cam.max_depth         = 50;
+    cam.samples_per_pixel = 10;
+    cam.max_depth         = 20;
 
     cam.vfov     = 20;
     cam.lookfrom = point3(13,2,3);

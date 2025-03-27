@@ -1,5 +1,6 @@
 #ifndef INTERVAL_H
 #define INTERVAL_H
+
 class interval {
   public:
     double min, max;

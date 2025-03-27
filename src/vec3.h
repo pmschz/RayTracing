@@ -1,5 +1,6 @@
 #ifndef VEC3_H
 #define VEC3_H
+
 class vec3 {
   public:
     double e[3];
@@ -56,12 +57,9 @@ class vec3 {
     }
 };
 
-// point3 is just an alias for vec3, but useful for geometric clarity in the code.
 using point3 = vec3;
 
-
 // Vector Utility Functions
-
 inline vec3 operator+(const vec3& u, const vec3& v) {
     return vec3(u.e[0] + v.e[0], u.e[1] + v.e[1], u.e[2] + v.e[2]);
 }

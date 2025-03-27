@@ -2,7 +2,6 @@
 #define MATERIAL_H
 #include "hittable.h"
 
-
 class material {
   public:
     virtual ~material() = default;
@@ -13,7 +12,6 @@ class material {
         return false;
     }
 };
-
 
 class lambertian : public material {
   public:
@@ -36,7 +34,6 @@ class lambertian : public material {
     color albedo;
 };
 
-
 class metal : public material {
   public:
     metal(const color& albedo, double fuzz) : albedo(albedo), fuzz(fuzz < 1 ? fuzz : 1) {}
@@ -54,7 +51,6 @@ class metal : public material {
     color albedo;
     double fuzz;
 };
-
 
 class dielectric : public material {
   public:
@@ -82,8 +78,6 @@ class dielectric : public material {
     }
 
   private:
-    // Refractive index in vacuum or air, or the ratio of the material's refractive index over
-    // the refractive index of the enclosing media
     double refraction_index;
 
     static double reflectance(double cosine, double refraction_index) {
@@ -93,6 +87,5 @@ class dielectric : public material {
         return r0 + (1-r0)*std::pow((1 - cosine),5);
     }
 };
-
 
 #endif

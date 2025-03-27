@@ -3,7 +3,6 @@
 #include "hittable.h"
 #include "material.h"
 
-
 class camera {
   public:
     double aspect_ratio      = 1.0;  // Ratio of image width over height
@@ -69,7 +68,6 @@ class camera {
         u = unit_vector(cross(vup, w));
         v = cross(w, u);
 
-        // Calculate the vectors across the horizontal and down the vertical viewport edges.
         vec3 viewport_u = viewport_width * u;    // Vector across viewport horizontal edge
         vec3 viewport_v = viewport_height * -v;  // Vector down viewport vertical edge
 
@@ -88,8 +86,6 @@ class camera {
     }
 
     ray get_ray(int i, int j) const {
-        // Construct a camera ray originating from the defocus disk and directed at a randomly
-        // sampled point around the pixel location i, j.
 
         auto offset = sample_square();
         auto pixel_sample = pixel00_loc
@@ -103,23 +99,20 @@ class camera {
     }
 
     vec3 sample_square() const {
-        // Returns the vector to a random point in the [-.5,-.5]-[+.5,+.5] unit square.
         return vec3(random_double() - 0.5, random_double() - 0.5, 0);
     }
 
     vec3 sample_disk(double radius) const {
-        // Returns a random point in the unit (radius 0.5) disk centered at the origin.
         return radius * random_in_unit_disk();
     }
 
     point3 defocus_disk_sample() const {
-        // Returns a random point in the camera defocus disk.
         auto p = random_in_unit_disk();
         return center + (p[0] * defocus_disk_u) + (p[1] * defocus_disk_v);
     }
 
     color ray_color(const ray& r, int depth, const hittable& world) const {
-        // If we've exceeded the ray bounce limit, no more light is gathered.
+        // If we've exceeded the ray bounce limit, no more light is gathered
         if (depth <= 0)
             return color(0,0,0);
 
