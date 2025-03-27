@@ -64,6 +64,14 @@ g++ -std=c++11 src/main.cc -o main && ./main > image.ppm
 open output.ppm
 </pre>
 
+## Image Progress Demo
+<p align="center">
+  <video width="640" height="360" controls>
+    <source src="/Users/paulina/Documents/GitHub/RayTracing/images/Raytracing Demo.mov" type="video/mp4">
+</video>
+</p>
+
+
 ## ⭐ Contributing & Feedback
 <p>If you have suggestions or want to contribute, feel free to open an issue or pull request!</p>
 
