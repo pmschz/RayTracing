@@ -25,7 +25,7 @@ rendering technique that produces highly realistic lighting effects by simulatin
 
 ---
 
-## 🛠Prerequisites
+## Prerequisites
 <ul>
   <li> C++ compiler (<code>g++</code> or <code>clang++</code>)</li>
   <li> CMake</li>
