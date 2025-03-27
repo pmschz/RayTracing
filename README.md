@@ -1,7 +1,7 @@
 <h1 align="center">🌟 Ray Tracing Project</h1>
 
 <p align="center">
-  <img src="images/render.png" width="600" alt="Sample Render">
+  <img src="images/final.png" width="600" alt="Sample Render">
   <br>
   <i>A simple ray tracing renderer built from scratch in C++.</i>
 </p>
