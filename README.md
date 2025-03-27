@@ -1,4 +1,4 @@
-<h1 align="center">🌟 Ray Tracing Project</h1>
+<h1 align="center"> Ray Tracing Project</h1>
 
 <p align="center">
   <img src="images/final.png" width="600" alt="Sample Render">
@@ -61,7 +61,7 @@ g++ -std=c++11 src/main.cc -o main && ./main > image.ppm
 
 ##  To View Output on Mac
 <pre>
-open output.ppm
+open image.ppm
 </pre>
 
 ## Video Demo
